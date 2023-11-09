@@ -27,4 +27,32 @@ class GuestController extends Controller
         $guest->fill($form)->save();
         return redirect('/guest');
     }
+
+    public function edit(Request $request)
+    {
+        $guest = Guest::find($request->id);
+        return view('guest.edit', ['form' => $guest]);
+    }
+
+    public function update(Request $request)
+    {
+        $this->validate($request, Guest::$rules);
+        $guest =Guest::find($request->id);
+        $form = $request->all();
+        unset($form['_token']);
+        $guest->fill($form)->save();
+        return redirect('/guest');
+    }
+
+    public function delete(Request $request)
+    {
+        $guest = Guest::find($request->id);
+        return view('guest.del', ['form' => $guest]);
+    }
+
+    public function remove(Request $request)
+    {
+        Guest::find($request->id)->delete();
+        return redirect('/guest');
+    }
 }
