@@ -4,29 +4,33 @@
 
 @section('menubar')
     {{-- @parent --}}
-    利用者情報削除ページ
+    予約情報削除ページ
 @endsection
 
 @section('content')
-    <form action="/guest/del" method="post">
+    <form action="/reservation/del" method="post">
     <table>
         @csrf
         <input type="hidden" name="id" value="{{$form->id}}">
+        <tr>
+            <th>予約ID:</th>
+            <td>{{$form->reservation_id}}</td>
+        </tr>
         <tr>
             <th>利用者ID:</th>
             <td>{{$form->guest_id}}</td>
         </tr>
         <tr>
-            <th>氏名:</th>
-            <td>{{$form->name}}</td>
+            <th>人数:</th>
+            <td>{{$form->number_peaple}}</td>
         </tr>
         <tr>
-            <th>住所:</th>
-            <td>{{$form->address}}</td>
+            <th>チェックイン日:</th>
+            <td>{{$form->checkIn_date}}</td>
         </tr>
         <tr>
-            <th>電話番号:</th>
-            <td>{{$form->guest_tel}}</td>
+            <th>チェックアウト日:</th>
+            <td>{{$form->checkOut_date}}</td>
         </tr>
     </table>
     <tr>

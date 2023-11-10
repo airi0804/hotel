@@ -4,7 +4,7 @@
 
 @section('menubar')
     {{-- @parent --}}
-    利用者情報編集ページ
+    予約情報編集ページ
 @endsection
 
 @section('content')
@@ -17,25 +17,29 @@
             </ul>
         </div>
     @endif
-    <form action="/guest/edit" method="post">
+    <form action="/reservation/edit" method="post">
         <table>
             @csrf
             <input type="hidden" name="id" value="{{ $form->id }}">
+            <tr>
+                <th>予約ID:</th>
+                <td><input type="number" name="reservation_id" value="{{$form->reservation_id}}"></td>
+            </tr>
             <tr>
                 <th>利用者ID:</th>
                 <td><input type="number" name="guest_id" value="{{$form->guest_id}}"></td>
             </tr>
             <tr>
-                <th>氏名:</th>
-                <td><input type="text" name="name" value="{{$form->name}}"></td>
+                <th>人数:</th>
+                <td><input type="number" name="number_peaple" value="{{$form->number_peaple}}"></td>
             </tr>
             <tr>
-                <th>住所:</th>
-                <td><input type="text" name="address" value="{{$form->address}}"></td>
+                <th>チェックイン日:</th>
+                <td><input type="date" name="checkIn_date" value="{{$form->checkIn_date}}"></td>
             </tr>
             <tr>
-                <th>電話番号:</th>
-                <td><input type="number" name="guest_tel" value="{{$form->guest_tel}}"></td>
+                <th>チェックアウト日:</th>
+                <td><input type="date" name="checkOut_date" value="{{$form->checkOut_date}}"></td>
             </tr>
         </table>
         <tr>

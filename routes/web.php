@@ -31,3 +31,12 @@ Route::post('guest/del', 'GuestController@remove');
 
 // reservation
 Route::get('reservation', 'ReservationController@index');
+
+Route::get('reservation/add', 'ReservationController@add');
+Route::post('reservation/add', 'ReservationController@create');
+
+Route::get('reservation/edit', 'ReservationController@edit');
+Route::post('reservation/edit', 'ReservationController@update');
+
+Route::get('reservation/del', 'ReservationController@delete');
+Route::post('reservation/del', 'ReservationController@remove');

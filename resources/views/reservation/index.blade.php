@@ -13,8 +13,8 @@
             <th>予約ID</th>
             <th>利用者ID</th>
             <th>人数</th>
-            <th>チェックイン日付</th>
-            <th>チェックアウト日付</th>
+            <th>チェックイン日</th>
+            <th>チェックアウト日</th>
         </tr>
         @foreach ($items as $item)
             <tr>
