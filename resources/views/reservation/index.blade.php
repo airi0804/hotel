@@ -49,7 +49,7 @@
                 <td>{{ $item->guest->name }}様</td>
                 <td>{{ $item->guest->address }}</td>
                 <td>{{ $item->guest->guest_tel }}</td>
-                <td>{{ $item->number_peaple }}人</td>
+                <td>{{ $item->number_of_peaple }}人</td>
                 <td>{{ $item->checkIn_date }}</td>
                 <td>{{ $item->checkOut_date }}</td>
             </tr>

@@ -10,7 +10,8 @@
         border-collapse: collapse;
     }
 
-    table th, table td {
+    table th,
+    table td {
         padding: 10px 5px;
         border: dashed 2px rgb(122, 161, 111);
         text-align: center;
