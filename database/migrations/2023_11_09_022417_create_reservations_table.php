@@ -17,7 +17,7 @@ class CreateReservationsTable extends Migration
             $table->bigIncrements('reservation_id');
             // $table->integer('reservation_id');
             $table->integer('guest_id');
-            $table->integer('number_peaple');
+            $table->integer('number_of_peaple');
             $table->date('checkIn_date');
             $table->date('checkOut_date');
             $table->timestamps();

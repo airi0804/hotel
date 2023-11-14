@@ -3,7 +3,6 @@
 @section('title', 'Reservation.index')
 
 <style>
-    
     table {
         width: 80%;
         border: solid 3px rgb(202, 219, 212);
@@ -36,6 +35,9 @@
         <tr>
             <th>予約ID</th>
             <th>利用者ID</th>
+            <th>氏名</th>
+            <th>住所</th>
+            <th>電話番号</th>
             <th>人数</th>
             <th>チェックイン日</th>
             <th>チェックアウト日</th>
@@ -44,6 +46,9 @@
             <tr>
                 <td>{{ $item->reservation_id }}</td>
                 <td>{{ $item->guest_id }}</td>
+                <td>{{ $item->guest->name }}様</td>
+                <td>{{ $item->guest->address }}</td>
+                <td>{{ $item->guest->guest_tel }}</td>
                 <td>{{ $item->number_peaple }}人</td>
                 <td>{{ $item->checkIn_date }}</td>
                 <td>{{ $item->checkOut_date }}</td>

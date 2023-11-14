@@ -53,7 +53,7 @@
             </tr>
             <tr>
                 <th>人数:</th>
-                <td><input type="number" name="number_peaple" value="{{$form->number_peaple}}">人</td>
+                <td><input type="number" name="number_of_peaple" value="{{$form->number_of_peaple}}">人</td>
             </tr>
             <tr>
                 <th>チェックイン日:</th>

@@ -40,7 +40,7 @@
         </tr>
         <tr>
             <th>人数:</th>
-            <td>{{$form->number_peaple}}人</td>
+            <td>{{$form->number_of_peaple}}人</td>
         </tr>
         <tr>
             <th>チェックイン日:</th>

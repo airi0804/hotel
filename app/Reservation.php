@@ -12,13 +12,14 @@ class Reservation extends Model
     public static $rules = array(
         // 'reservation_id' => 'required',
         'guest_id' => 'required',
-        'number_peaple' => 'required',
+        'number_of_peaple' => 'required',
         'checkIn_date' => 'required',
         'checkOut_date' => 'required'
     );
 
     public function guest()
     {
-        return $this->belongsTo('App/Guest');
+        // belomgTo            (主テーブル、従テーブルの外部キー、対応する主テーブルの主キー)
+        return $this->belongsTo('App/Guest',    'guest_id',           'guest_id');
     }
 }
