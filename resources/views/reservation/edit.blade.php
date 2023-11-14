@@ -1,13 +1,35 @@
-@extends('layouts.helloapp')
+@extends('layouts.hotel')
 
-@section('title', 'Index')
+@section('title', 'Reservation.Edit')
 
-@section('menubar')
+<style>
+    table {
+        width: 80%;
+        border: solid 3px rgb(202, 219, 212);
+        /* 線の間に隙間を作らない */
+        border-collapse: collapse;
+    }
+
+    table th, table td {
+        padding: 10px 5px;
+        border: dashed 2px rgb(122, 161, 111);
+        text-align: center;
+    }
+    
+    table td {
+        font-weight: 700;
+    }
+
+    input[type="submit"] {
+        margin: 30px 0 0 350px;
+        width: 100px;
+        padding: 15px 0;
+    }
+</style>
+
+@section('body')
     {{-- @parent --}}
-    予約情報編集ページ
-@endsection
-
-@section('content')
+    <h2>予約情報編集ページ</h2>
     @if (count($errors) > 0)
         <div>
             <ul>
@@ -23,7 +45,7 @@
             <input type="hidden" name="id" value="{{ $form->id }}">
             <tr>
                 <th>予約ID:</th>
-                <td><input type="number" name="reservation_id" value="{{$form->reservation_id}}"></td>
+                <td>{{$form->reservation_id}}</td>
             </tr>
             <tr>
                 <th>利用者ID:</th>
@@ -31,7 +53,7 @@
             </tr>
             <tr>
                 <th>人数:</th>
-                <td><input type="number" name="number_peaple" value="{{$form->number_peaple}}"></td>
+                <td><input type="number" name="number_peaple" value="{{$form->number_peaple}}">人</td>
             </tr>
             <tr>
                 <th>チェックイン日:</th>
@@ -44,7 +66,7 @@
         </table>
         <tr>
             <th></th>
-            <td><input type="submit" value="send"></td>
+            <td><input type="submit" value="変更"></td>
         </tr>
     </form>
 @endsection

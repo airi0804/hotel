@@ -1,13 +1,37 @@
-@extends('layouts.helloapp')
+@extends('layouts.hotel')
 
-@section('title', 'Index')
+@section('title', 'Reservation.index')
 
-@section('menubar')
+<style>
+    
+    table {
+        width: 80%;
+        border: solid 3px rgb(202, 219, 212);
+        /* 線の間に隙間を作らない */
+        border-collapse: collapse;
+    }
+
+    table th,
+    table td {
+        padding: 10px 5px;
+        border: dashed 2px rgb(122, 161, 111);
+        text-align: center;
+    }
+
+    table tr:nth-child(odd) {
+        background-color: rgb(240, 240, 232);
+    }
+
+    input[type="submit"] {
+        margin: 30px 0 0 350px;
+        width: 100px;
+        padding: 15px 0;
+    }
+</style>
+
+@section('body')
     {{-- @parent --}}
-    予約情報ページ
-@endsection
-
-@section('content')
+    <h2>予約情報ページ</h2>
     <table>
         <tr>
             <th>予約ID</th>
@@ -20,7 +44,7 @@
             <tr>
                 <td>{{ $item->reservation_id }}</td>
                 <td>{{ $item->guest_id }}</td>
-                <td>{{ $item->number_peaple }}</td>
+                <td>{{ $item->number_peaple }}人</td>
                 <td>{{ $item->checkIn_date }}</td>
                 <td>{{ $item->checkOut_date }}</td>
             </tr>

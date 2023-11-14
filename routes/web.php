@@ -40,3 +40,9 @@ Route::post('reservation/edit', 'ReservationController@update');
 
 Route::get('reservation/del', 'ReservationController@delete');
 Route::post('reservation/del', 'ReservationController@remove');
+
+// room
+Route::get('room', 'RoomController@index');
+
+// room_type_master
+Route::get('room_type_master', 'RoomTypeMasterController@index');

@@ -37,7 +37,7 @@ class GuestController extends Controller
     public function update(Request $request)
     {
         $this->validate($request, Guest::$rules);
-        $guest =Guest::find($request->id);
+        $guest = Guest::find($request->id);
         $form = $request->all();
         unset($form['_token']);
         $guest->fill($form)->save();

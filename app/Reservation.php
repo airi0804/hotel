@@ -16,8 +16,13 @@ class Reservation extends Model
         'checkOut_date' => 'required'
     );
 
-    public function getData()
-    {
-        return $this->id . ': ' . $this->name;
-    }
+    // public function getData()
+    // {
+    //     return $this->id . ': ' . $this->name;
+    // }
+
+    // public function guest()
+    // {
+    //     return $this->belongsTo('App/Guest');
+    // }
 }

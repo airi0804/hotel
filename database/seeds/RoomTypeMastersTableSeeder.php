@@ -4,7 +4,7 @@ use Illuminate\Database\Seeder;
 
 use Illuminate\Support\Facades\DB;
 
-class GuestsTableSeeder extends Seeder
+class RoomTypeMastersTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -14,10 +14,10 @@ class GuestsTableSeeder extends Seeder
     public function run()
     {
         $param = [
-            'name' => 'taro',
-            'address' => '奈良県',
-            'guest_tel' => 1234567890,
+            'room_type_id' => 1,
+            'room_name' => '洋室',
+            'capacity' => 4,
         ];
-        DB::table('guests')->insert($param);
+        DB::table('room_type_masters')->insert($param);
     }
 }
