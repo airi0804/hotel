@@ -42,7 +42,7 @@
     <form action="/reservation/edit" method="post">
         <table>
             @csrf
-            <input type="hidden" name="id" value="{{ $form->id }}">
+            <input type="hidden" name="reservation_id" value="{{ $form->reservation_id }}">
             <tr>
                 <th>予約ID:</th>
                 <td>{{$form->reservation_id}}</td>

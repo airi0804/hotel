@@ -30,14 +30,14 @@ class ReservationController extends Controller
 
     public function edit(Request $request)
     {
-        $reservation = Reservation::find($request->id);
+        $reservation = Reservation::find($request->reservation_id);
         return view('reservation.edit', ['form' => $reservation]);
     }
 
     public function update(Request $request)
     {
         $this->validate($request, Reservation::$rules);
-        $reservation =Reservation::find($request->id);
+        $reservation =Reservation::find($request->reservation_id);
         $form = $request->all();
         unset($form['_token']);
         $reservation->fill($form)->save();
@@ -46,13 +46,13 @@ class ReservationController extends Controller
 
     public function delete(Request $request)
     {
-        $reservation = Reservation::find($request->id);
+        $reservation = Reservation::find($request->reservation_id);
         return view('reservation.del', ['form' => $reservation]);
     }
 
     public function remove(Request $request)
     {
-        Reservation::find($request->id)->delete();
+        Reservation::find($request->reservation_id)->delete();
         return redirect('/reservation');
     }
 }
