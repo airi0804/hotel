@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class RoomTypeMaster extends Model
 {
     protected $guarded = array('room_type_id');
+    // protected $fillable = ['room_name', 'capacity'];
     protected $primaryKey = 'room_type_id';
     
     public static $rules = array(

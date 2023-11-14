@@ -10,7 +10,8 @@
         border-collapse: collapse;
     }
 
-    table th, table td {
+    table th,
+    table td {
         padding: 10px 5px;
         border: dashed 2px rgb(122, 161, 111);
         text-align: center;
@@ -24,12 +25,16 @@
         <tr>
             <th>部屋ID</th>
             <th>部屋種別ID</th>
+            <th>名称</th>
+            <th>宿泊可能人数</th>
             <th>部屋番号</th>
         </tr>
         @foreach ($items as $item)
             <tr>
                 <td>{{ $item->room_id }}</td>
-                <td>{{ $item->room_type_id }}</td>
+                <td>{{ $item->room_type_master->room_type_id }}</td>
+                <td>{{ $item->room_type_master->room_name }}</td>
+                <td>{{ $item->room_type_master->capacity }}人</td>
                 <td>{{ $item->room_number }}号室</td>
             </tr>
         @endforeach

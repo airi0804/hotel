@@ -14,4 +14,9 @@ class Room extends Model
         'room_type_id' => 'required',
         'room_number' => 'required'
     );
+
+    public function room_type_master()
+    {
+        return $this->belongsTo('App\RoomTypeMaster', 'room_type_id', 'room_type_id');
+    }
 }
