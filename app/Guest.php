@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Guest extends Model
 {
-    protected $guarded = array('id');
+    protected $guarded = array('guest_id');
 
     public static $rules = array(
         // 'guest_id' => 'required',
@@ -14,6 +14,8 @@ class Guest extends Model
         'address' => 'required',
         'guest_tel' => 'required'
     );
+
+    protected $primaryKey = 'guest_id';
 
     // public function getData()
     // {

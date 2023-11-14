@@ -35,10 +35,10 @@
     <form action="/guest/del" method="post">
     <table>
         @csrf
-        <input type="hidden" name="id" value="{{$form->id}}">
+        <input type="hidden" name="guest_id" value="{{$form->guest_id}}">
         <tr>
             <th>利用者ID:</th>
-            <td>{{$form->id}}</td>
+            <td>{{$form->guest_id}}</td>
         </tr>
         <tr>
             <th>氏名:</th>

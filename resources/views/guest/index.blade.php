@@ -33,7 +33,7 @@
         </tr>
         @foreach ($items as $item)
             <tr>
-                <td>{{ $item->id }}</td>
+                <td>{{ $item->guest_id }}</td>
                 <td>{{ $item->name }}様</td>
                 <td>{{ $item->address }}</td>
                 <td>{{ $item->guest_tel }}</td>

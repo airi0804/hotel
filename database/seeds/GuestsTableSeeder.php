@@ -14,6 +14,7 @@ class GuestsTableSeeder extends Seeder
     public function run()
     {
         $param = [
+            'guest_id' => 1,
             'name' => 'taro',
             'address' => '奈良県',
             'guest_tel' => 1234567890,
