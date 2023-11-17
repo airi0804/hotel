@@ -19,5 +19,12 @@ class RoomTypeMastersTableSeeder extends Seeder
             'capacity' => 4,
         ];
         DB::table('room_type_masters')->insert($param);
+
+        $param = [
+            'room_type_id' => 2,
+            'room_name' => '洋室',
+            'capacity' => 2,
+        ];
+        DB::table('room_type_masters')->insert($param);
     }
 }

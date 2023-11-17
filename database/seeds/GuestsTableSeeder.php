@@ -17,7 +17,15 @@ class GuestsTableSeeder extends Seeder
             'guest_id' => 1,
             'name' => 'taro',
             'address' => '奈良県',
-            'guest_tel' => 1234567890,
+            'guest_tel' => '123-4567-890',
+        ];
+        DB::table('guests')->insert($param);
+
+        $param = [
+            'guest_id' => 2,
+            'name' => 'hanako',
+            'address' => '東京都',
+            'guest_tel' => '098-7654-321',
         ];
         DB::table('guests')->insert($param);
     }

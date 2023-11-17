@@ -18,7 +18,7 @@ class CreateGuestsTable extends Migration
             // $table->integer('guest_id');
             $table->string('name');
             $table->string('address');
-            $table->integer('guest_tel');
+            $table->string('guest_tel');
             $table->timestamps();
         });
     }

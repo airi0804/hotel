@@ -41,8 +41,23 @@ Route::post('reservation/edit', 'ReservationController@update');
 Route::get('reservation/del', 'ReservationController@delete');
 Route::post('reservation/del', 'ReservationController@remove');
 
+
 // room
 Route::get('room', 'RoomController@index');
 
+
 // room_type_master
 Route::get('room_type_master', 'RoomTypeMasterController@index');
+
+
+// reservation_detail
+// Route::get('reservation_detail', 'ReservationDetailController@index');
+
+// Route::get('reservation_detail/add', 'ReservationDetailController@add');
+// Route::post('reservation_detail/add', 'ReservationDetailController@create');
+
+// reservation_room
+Route::get('reservation_room', 'ReservationRoomController@index');
+
+Route::get('reservation_room/add', 'ReservationRoomController@add');
+Route::post('reservation_room/add', 'ReservationRoomController@create');

@@ -16,9 +16,18 @@ class ReservationsTableSeeder extends Seeder
         $param = [
             'reservation_id' => 1,
             'guest_id' => 1,
+            'number_of_peaple' => 4,
+            'checkIn_date' => '2023-11-05',
+            'checkOut_date' => '2023-11-07',
+        ];
+        DB::table('reservations')->insert($param);
+
+        $param = [
+            'reservation_id' => 2,
+            'guest_id' => 2,
             'number_of_peaple' => 2,
             'checkIn_date' => '2023-11-05',
-            'checkOut_date' => '2023-11-10',
+            'checkOut_date' => '2023-11-06',
         ];
         DB::table('reservations')->insert($param);
     }

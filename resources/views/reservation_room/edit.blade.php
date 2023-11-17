@@ -1,6 +1,6 @@
 @extends('layouts.hotel')
 
-@section('title', 'Guest.Edit')
+@section('title', 'ReservationRoom.Edit')
 
 @section('body')
     {{-- @parent --}}
@@ -37,7 +37,7 @@
             </tr>
             <tr>
                 <th>電話番号:</th>
-                <td><input type="tel" name="guest_tel" value="{{ $form->guest_tel }}"></td>
+                <td><input type="number" name="guest_tel" value="{{ $form->guest_tel }}"></td>
             </tr>
         </table>
         <tr>

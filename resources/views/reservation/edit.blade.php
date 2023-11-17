@@ -2,31 +2,6 @@
 
 @section('title', 'Reservation.Edit')
 
-<style>
-    table {
-        width: 80%;
-        border: solid 3px rgb(202, 219, 212);
-        /* 線の間に隙間を作らない */
-        border-collapse: collapse;
-    }
-
-    table th, table td {
-        padding: 10px 5px;
-        border: dashed 2px rgb(122, 161, 111);
-        text-align: center;
-    }
-    
-    table td {
-        font-weight: 700;
-    }
-
-    input[type="submit"] {
-        margin: 30px 0 0 350px;
-        width: 100px;
-        padding: 15px 0;
-    }
-</style>
-
 @section('body')
     {{-- @parent --}}
     <h2>予約情報編集ページ</h2>
@@ -45,23 +20,23 @@
             <input type="hidden" name="reservation_id" value="{{ $form->reservation_id }}">
             <tr>
                 <th>予約ID:</th>
-                <td>{{$form->reservation_id}}</td>
+                <td>{{ $form->reservation_id }}</td>
             </tr>
             <tr>
                 <th>利用者ID:</th>
-                <td><input type="number" name="guest_id" value="{{$form->guest_id}}"></td>
+                <td><input type="number" name="guest_id" value="{{ $form->guest_id }}"></td>
             </tr>
             <tr>
                 <th>人数:</th>
-                <td><input type="number" name="number_of_peaple" value="{{$form->number_of_peaple}}">人</td>
+                <td><input type="number" name="number_of_peaple" value="{{ $form->number_of_peaple }}">名</td>
             </tr>
             <tr>
                 <th>チェックイン日:</th>
-                <td><input type="date" name="checkIn_date" value="{{$form->checkIn_date}}"></td>
+                <td><input type="date" name="checkIn_date" value="{{ $form->checkIn_date }}"></td>
             </tr>
             <tr>
                 <th>チェックアウト日:</th>
-                <td><input type="date" name="checkOut_date" value="{{$form->checkOut_date}}"></td>
+                <td><input type="date" name="checkOut_date" value="{{ $form->checkOut_date }}"></td>
             </tr>
         </table>
         <tr>

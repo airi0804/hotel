@@ -1,6 +1,6 @@
 @extends('layouts.hotel')
 
-@section('title', 'Guest.Delete')
+@section('title', 'ReservationRoom.Delete')
 
 @section('body')
     {{-- @parent --}}
